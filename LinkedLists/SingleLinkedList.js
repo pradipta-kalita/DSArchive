@@ -22,33 +22,13 @@ class LinkedList {
     console.log(arr);
   }
 
-  getHead() {
-    if (this.head === null) {
-      console.log("Head: null");
-    } else {
-      console.log("Head: " + this.head.value);
-    }
-  }
-
-  getTail() {
-    if (this.tail === null) {
-      console.log("Tail: null");
-    } else {
-      console.log("Tail: " + this.tail.value);
-    }
-  }
-
-  getLength() {
-    console.log("Length: " + this.length);
-  }
-
-  makeEmpty() {
+  clear() {
     this.head = null;
     this.tail = null;
     this.length = 0;
   }
 
-  push(value) {
+  add(value) {
     const newNode = new Node(value);
     if (!this.head) {
       this.head = newNode;
@@ -61,7 +41,7 @@ class LinkedList {
     return this;
   }
 
-  pop() {
+  remove() {
     if (!this.head) return undefined;
     var current = this.head;
     var newTail = current;
@@ -122,7 +102,7 @@ class LinkedList {
     return false;
   }
 
-  insert(index, value) {
+  insertAt(index, value) {
     if (index < 0 || index > this.length) return false;
     if (index === this.length) return this.push(value);
     if (index === 0) return this.unshift(value);
@@ -135,7 +115,7 @@ class LinkedList {
     return true;
   }
 
-  remove(index) {
+  removeAt(index) {
     if (index < 0 || index >= this.length) return undefined;
     if (index === 0) return this.shift();
     if (index === this.length - 1) return this.pop();

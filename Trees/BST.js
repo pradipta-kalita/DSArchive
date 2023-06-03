@@ -106,3 +106,5 @@ class BST {
     return data;
   }
 }
+
+module.exports = BST;

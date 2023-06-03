@@ -49,7 +49,7 @@ class DoublyLinkedList {
     this.length = 0;
   }
 
-  push(value) {
+  add(value) {
     const newNode = new Node(value);
     if (this.length === 0) {
       this.head = newNode;
@@ -63,7 +63,7 @@ class DoublyLinkedList {
     return this;
   }
 
-  pop() {
+  remove() {
     if (this.length === 0) return undefined;
     let temp = this.tail;
     if (this.length === 1) {
@@ -132,9 +132,9 @@ class DoublyLinkedList {
     return false;
   }
 
-  insert(index, value) {
+  insertAt(index, value) {
     if (index < 0 || index > this.length) return false;
-    if (index === this.length) return this.push(value);
+    if (index === this.length) return this.add(value);
     if (index === 0) return this.unshift(value);
 
     const newNode = new Node(value);
@@ -148,9 +148,9 @@ class DoublyLinkedList {
     return true;
   }
 
-  remove(index) {
+  removeAt(index) {
     if (index === 0) return this.shift();
-    if (index === this.length - 1) return this.pop();
+    if (index === this.length - 1) return this.remove();
     if (index < 0 || index >= this.length) return undefined;
 
     const temp = this.get(index);
