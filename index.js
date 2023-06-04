@@ -17,6 +17,11 @@ const DoublyLinkedList = require("./LinkedLists/DoublyLinkedList");
 const Stack = require("./Stack&Queue/Stack");
 const Queue = require("./Stack&Queue/Queue");
 const BST = require("./Trees/BST");
+const MinBinaryHeap = require("./Trees/MinBinaryHeap");
+const MaxBinaryHeap = require("./Trees/MaxBinaryHeap");
+const MinPriorityQueue = require("./Trees/MinPriorityQueue");
+const MaxPriorityQueue = require("./Trees/MaxPriorityQueue");
+const HashTable = require("./HashTable/HashTable");
 
 module.exports = {
   binarySearch,
@@ -33,4 +38,9 @@ module.exports = {
   Stack,
   Queue,
   BST,
+  MaxBinaryHeap,
+  MinBinaryHeap,
+  MaxPriorityQueue,
+  MinPriorityQueue,
+  HashTable,
 };
